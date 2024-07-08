@@ -19,6 +19,8 @@
     <link rel="'stylesheet" as="image" href="./images/hero-slider-1.jpg">
     <link rel="'stylesheet" as="image" href="./images/hero-slider-2.jpg">
     <link rel="'stylesheet" as="image" href="./images/hero-slider-3.jpg">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body id="top">
 
@@ -512,14 +514,14 @@
             </section>
 
 
-            <!-- RESERVATION -->
+            <!-- RESERVATION FORM-->
             <section class="reservation">
                 <div class="container">
-                    <div class="form reservation-form bg-black-10">
-                        <form action="" class="form-left">
+                    <div class="form bg-black-10">
+                        <form action="http://localhost:3000/submit" method="post" class="form-left" id="reservation-form">
                             <h2 class="headline-1 text-center">Online Reservation</h2>
                             <p class="form-text text-center">
-                                Booking request call<a href="tel:+919783730700" class="link">+91-97837-30700</a>
+                                Booking request call <a href="tel:+919783730700" class="link">+91-97837-30700</a>
                                 or fill out the order form
                             </p>
                             <div class="input-wrapper">
@@ -530,7 +532,7 @@
                                 <div class="icon-wrapper">
                                     <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
                                     <select name="person" class="input-field">
-                                    <option value="1-person">1 Person</option>
+                                        <option value="1-person">1 Person</option>
                                         <option value="2-person">2 Person</option>
                                         <option value="3-person">3 Person</option>
                                         <option value="4-person">4 Person</option>
@@ -542,36 +544,36 @@
                                 </div>
                                 <div class="icon-wrapper">
                                     <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-                                    <input type="date" name="reservation-date" class="input-field">-
+                                    <input type="date" name="reservation-date" class="input-field">
                                     <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                                 </div>
                                 <div class="icon-wrapper">
-                                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                                <select name="person" class="input-field">                                          
-                                    <option value="09:00am">09 : 00 am</option>
-                                    <option value="10:00am">10 : 00 am</option>
-                                    <option value="11:00am">11 : 00 am</option>
-                                    <option value="12:00am">12 : 00 am</option>
-                                    <option value="01:00pm">01 : 00 pm</option>
-                                    <option value="02:00pm">02 : 00 pm</option>
-                                    <option value="03:00pm">03 : 00 pm</option>
-                                    <option value="04:00pm">04 : 00 pm</option>
-                                    <option value="05:00pm">05 : 00 pm</option>
-                                    <option value="06:00pm">06 : 00 pm</option>
-                                    <option value="07:00pm">07 : 00 pm</option>
-                                    <option value="08:00pm">08 : 00 pm</option>
-                                    <option value="09:00pm">09 : 00 pm</option>
-                                    <option value="10:00pm">10 : 00 pm</option>
-                                </select>
-                                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                    <select name="timeRes" class="input-field">
+                                        <option value="09:00am">09 : 00 am</option>
+                                        <option value="10:00am">10 : 00 am</option>
+                                        <option value="11:00am">11 : 00 am</option>
+                                        <option value="12:00am">12 : 00 am</option>
+                                        <option value="01:00pm">01 : 00 pm</option>
+                                        <option value="02:00pm">02 : 00 pm</option>
+                                        <option value="03:00pm">03 : 00 pm</option>
+                                        <option value="04:00pm">04 : 00 pm</option>
+                                        <option value="05:00pm">05 : 00 pm</option>
+                                        <option value="06:00pm">06 : 00 pm</option>
+                                        <option value="07:00pm">07 : 00 pm</option>
+                                        <option value="08:00pm">08 : 00 pm</option>
+                                        <option value="09:00pm">09 : 00 pm</option>
+                                        <option value="10:00pm">10 : 00 pm</option>
+                                    </select>
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
                             </div>
-                        </div>
-                        <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-                        <button type="submit" class="btn btn-secondary">
-                            <span class="text text-1">Book A Table</span>
-                            <span class="text text-2" aria-hidden="true">Book A Table</span>
-                        </button>
-                    </form>
+                            <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+                            <button type="submit" class="btn btn-secondary">
+                                <span class="text text-1">Book A Table</span>
+                                <span class="text text-2" aria-hidden="true">Book A Table</span>
+                            </button>
+                        </form>
 
                     <div class="form-right text-center" style="background-image: url('./images/form-pattern.png')">
 
@@ -741,7 +743,7 @@
             <p class="label-1">
                 Subscribe us & Get <span class="span">25% Off.</span>
             </p>
-            <form action="" class="input-wrapper">
+            <div class="input-wrapper">
                 <div class="icon-wrapper">
                     <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
                     <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
@@ -750,7 +752,7 @@
                     <span class="text text-1">Subscribe</span>
                     <span class="text text-2" aria-hidden="true">Subscribe</span>
                 </button>
-            </form>
+            </div>
             </div>
             <ul class="footer-list">
                 <li>
@@ -799,7 +801,6 @@
 
     <!-- JS link -->
     <script src="./script.js"></script>
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
